@@ -8,6 +8,8 @@
 #include <QVector>
 #include <QDebug>
 #include <QClipboard>
+#include <cstdio>
+#include <ctime>
 #include "RetroGameGauntlet.h"
 #include "Model.h"
 
@@ -65,15 +67,15 @@ void Model::rollGame(QString _platform)
         qDebug() << "Error opening platform file!";
     while(!games.atEnd())
         gms.append(QString::fromStdString(games.readLine().toStdString()));
-    qsrand(qrand());
-    int end = qrand() % 20 + 50;
-    for(int i = 0; i < end; i++)
-    {
-        QString gameName = gms[qrand() % gms.size()];
+    srand(time(0));
+    //int end = qrand() % 20 + 50;
+    //for(int i = 0; i < end; i++)
+    //{
+        QString gameName = gms[rand() % gms.size()];
         //currentSeason->addGame(new Game(gameName, _platform));
         emit gameRolled(gameName);
         setGame(gameName);
-    }
+    //}
 }
 
 void Model::setGame(QString _game)
