@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>TvSet.qml</file>
+        <file>VHSButton.qml</file>
+        <file>VHSText.qml</file>
+        <file>fromLocalFile.js</file>
+        <file>icon.rc</file>
+        <file>image/Authors.gif</file>
+        <file>image/Sign.gif</file>
+        <file>image/TvSet.gif</file>
+        <file>image/VHS.gif</file>
+        <file>ToolTip.qml</file>
+        <file>ToolTipCreator.js</file>
+    </qresource>
+</RCC>
