@@ -15,4 +15,4 @@ Future capabilities:
 * Select a game from standart and custom files (from a local drive and the Internet)
 * Save user settings (sounds, games files path, etc.)
 
-![Screenshot](https://www.dropbox.com/home?preview=Screenshot.JPG "v0.1 Dev")
+![Screenshot](https://photos-1.dropbox.com/t/2/AAB-E5lfZx20IGkcqvOyjatoF0QxgJrKu0iypA4C2oKnYQ/12/445502611/jpeg/32x32/1/_/1/2/Screenshot.JPG/EKPIkMwDGN8EIAcoBw/6wTD_knAIY0-zHL7KskhXDU3htVayg1OgQl-zlfRF1Y?size=1024x768&size_mode=2 "v0.1 Dev")
