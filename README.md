@@ -4,6 +4,8 @@ It's just a game roller now, but I'm going to add logging/history features (actu
 
 ## Retro Game Gauntlet v0.1 (Dev) 
 
+[UML Diagramm](https://www.dropbox.com/s/1ww7pxr8oh1qcll/outRGG.pdf?dl=0 "Download v0.1 Dev UML diagramm")
+
 0.1 Dev version capabilities:
 * Select a random game from lists stored on a hard drive
 
