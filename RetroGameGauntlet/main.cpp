@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-    RetroGameGauntlet rgg(argc, argv, "QCoder", "RetroGameGauntlet [Maddyson special] v0.1Dev");
+    RetroGameGauntlet rgg(argc, argv, "QCoder", "RetroGameGauntlet [Cake special]");
     return rgg.exec();
     //QApplication app(argc, argv);
 

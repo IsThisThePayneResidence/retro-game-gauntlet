@@ -40,21 +40,10 @@ Component
                     width: parent.width
                     height: parent.height
                     objectName: "maVHS"
-
-                    onFocusChanged:
-                    {
-                        imgVHS.scale = 1.6;
-                    }
-                    onExited:
-                    {
-                        imgVHS.scale = 1.0;
-                    }
                     onClicked:
                     {
                         rggModel.rollGame(imgVHS.name);
                     }
-
-
                 }
         }
     }

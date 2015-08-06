@@ -14,6 +14,7 @@
 #include "Model.h"
 
 
+
 /**
  * Model implementation
  */
@@ -22,6 +23,8 @@ Model::Model(QStringList _platform, QObject* _parent):
     QObject(_parent)
 {
     this->setAssignment();
+
+    srand(time(nullptr));
     //for(QString s : platformAssignment.keys())
     //    platformsList.push_back(s);
 
@@ -61,21 +64,16 @@ void Model::setSeason(Season* _season)
  */
 void Model::rollGame(QString _platform)
 {
+    this->setPlatform(_platform);
     QVector<QString> gms;
     QFile games(platformAssignment.value(_platform));
     if(!games.open(QIODevice::ReadOnly))
         qDebug() << "Error opening platform file!";
     while(!games.atEnd())
         gms.append(QString::fromStdString(games.readLine().toStdString()));
-    srand(time(0));
-    //int end = qrand() % 20 + 50;
-    //for(int i = 0; i < end; i++)
-    //{
-        QString gameName = gms[rand() % gms.size()];
-        //currentSeason->addGame(new Game(gameName, _platform));
-        emit gameRolled(gameName);
-        setGame(gameName);
-    //}
+    QString gameName = gms[rand() % gms.size()];
+    emit gameRolled(gameName);
+    setGame(gameName);
 }
 
 void Model::setGame(QString _game)
@@ -89,6 +87,13 @@ void Model::copyToClipboard(QString _text)
     RetroGameGauntlet::app()->clipboard()->clear();
     RetroGameGauntlet::app()->clipboard()->setText(_text);
 }
+
+void Model::setPlatform(QString _platform)
+{
+    this->currentPlatform = _platform;
+    emit platformChanged(this->currentPlatform);
+}
+
 /*
 void Model::setHistory(QTableModel* _history)
 {
@@ -129,6 +134,12 @@ QString Model::game()
 {
     return this->currentGame;
 }
+
+QString Model::platform()
+{
+    return this->currentPlatform;
+}
+
 
 /**
  * @param QStringList
@@ -232,34 +243,20 @@ void Model::setAssignment()
 {
     platformAssignment["Famicom/NES"] = "systems/list_nes.dat";
     platformAssignment["GameBoy/GameBoy Color"] = "systems/list_gb.dat";
-    platformAssignment["Master System"] = "systems/list_sms.dat";
-    platformAssignment["GameGear"] = "systems/list_gg.dat";
+    platformAssignment["Master System/GameGear"] = "systems/list_sms_gg.dat";
     platformAssignment["MegaDrive/Genesis"] = "systems/list_smd.dat";
     platformAssignment["Super Famicom/SNES"] = "systems/list_snes.dat";
-    platformAssignment["NeoGeo Pocket"] = "systems/list_ngp.dat";
     platformAssignment["TurboGrafx"] = "systems/list_tg16.dat";
-    platformAssignment["WonderSwan"] = "systems/list_ws.dat";
-    platformAssignment["NeoGeo"] = "systems/list_ngo.dat";
     platformAssignment["GameBoy Advance"] = "systems/list_gba.dat";
     platformAssignment["DOS"] = "systems/list_dos.dat";
-    platformAssignment["ZX Spectrum"] = "systems/list_zx.dat";
-    platformAssignment["MSX"] = "systems/list_msx.dat";
-    platformAssignment["MSX2"] = "systems/list_msx2.dat";
-    platformAssignment["Commodore 64"] = "systems/list_c64.dat";
-    platformAssignment["Commodore Amiga"] = "systems/list_amg.dat";
-    platformAssignment["Sega Saturn"] = "systems/list_ss.dat";
-    platformAssignment["PlayStation"] = "systems/list_psx.dat";
-    platformAssignment["Nintendo 64"] = "systems/list_n64.dat";
-    platformAssignment["Dreamcast"] = "systems/list_dc.dat";
-    platformAssignment["PlayStation 2"] = "systems/list_ps2.dat";
-    platformAssignment["Gamecube"] = "systems/list_gc.dat";
-    platformAssignment["PSP"] = "systems/list_psp.dat";
-    platformAssignment["Nintendo DS"] = "systems/list_ds.dat";
-    platformAssignment["Wii"] = "systems/list_wii.dat";
-    platformsList << "Famicom/NES" << "GameBoy/GameBoy Color" << "Master System" << "GameGear" << "MegaDrive/Genesis"
-                  << "Super Famicom/SNES" << "NeoGeo Pocket" << "TurboGrafx" << "WonderSwan" << "NeoGeo" << "GameBoy Advance"
-                  << "DOS" << "ZX Spectrum" << "MSX" << "MSX2" << "Commodore 64" << "Dreamcast" << "PlayStation 2" << "Gamecube"
-                  << "PSP" << "Nintendo DS" << "Wii";
+    platformAssignment["MSX/MSX2"] = "systems/list_msx_msx2.dat";
+    platformAssignment["C64/Amiga"] = "systems/list_c64_amiga.dat";
+    platformAssignment["PS/N64"] = "systems/list_psx_n64.dat";
+
+    platformsList << "Famicom/NES" << "GameBoy/GameBoy Color" << "Master System/GameGear" << "MegaDrive/Genesis"
+                  << "Super Famicom/SNES" << "TurboGrafx" << "GameBoy Advance" << "DOS" << "MSX/MSX2"
+                  << "C64/Amiga" << "PS/N64";
+
     emit assignmentSet();
 }
 

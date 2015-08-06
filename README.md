@@ -15,3 +15,4 @@ Future capabilities:
 * Play standart and custom sounds in menu and while rolling
 * Select a game from standart and custom files (from a local drive and the Internet)
 * Save user settings (sounds, games files path, etc.)
+-

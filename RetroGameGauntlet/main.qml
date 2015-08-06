@@ -9,7 +9,7 @@ Rectangle
     height: 720
     color: "#0d070f"
     radius: 5
-    border.color: "#f433ff"
+    border.color: "#67C8FF"
     border.width: 2
     visible: true
 
@@ -19,7 +19,6 @@ Rectangle
         objectName: "tvSetMain"
         x: 54
         y: 110
-        border.width: 0
     }
 
     Image
@@ -44,10 +43,10 @@ Rectangle
         height: 246
         delegate:
             VHSButton
-        {
-        id: vhsButtonDelegate
-    }
-    model: rggModel.rggPlatforms
+            {
+                id: vhsButtonDelegate
+            }
+        model: rggModel.rggPlatforms
     }
 
     Image

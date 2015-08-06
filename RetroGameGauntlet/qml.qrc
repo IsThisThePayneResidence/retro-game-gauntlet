@@ -12,5 +12,7 @@
         <file>image/VHS.gif</file>
         <file>ToolTip.qml</file>
         <file>ToolTipCreator.js</file>
+        <file>Delay.js</file>
+        <file>DoubleTimer.qml</file>
     </qresource>
 </RCC>

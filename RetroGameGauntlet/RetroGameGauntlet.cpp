@@ -25,7 +25,9 @@
 RetroGameGauntlet::RetroGameGauntlet(int _argc, char** _argv, QString _organization, QString _application):
     QApplication(_argc, _argv)
 {
-
+    qApp->setOrganizationName(_organization);
+    qApp->setApplicationName(_application);
+    qApp->setApplicationDisplayName(_application);
 }
 
 /**

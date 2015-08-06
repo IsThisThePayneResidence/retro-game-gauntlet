@@ -35,7 +35,7 @@ Text {
  id: tooltipText
  anchors.centerIn: parent
  horizontalAlignment: Text.AlignHCenter
- color: "#f433ff"
+ color: "#67C8FF"
  font.pointSize: 10
  font.bold: true
  }

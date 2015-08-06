@@ -31,7 +31,15 @@ Controller::Controller(Model* _mdl, QString _viewPath, QObject* _parent):
     if(!_viewPath.isEmpty())
         qmlView = new QQuickView(QUrl(_viewPath));
     qmlView->rootContext()->setContextProperty("rggController", this);
+
+
+
+
     qmlView->rootContext()->setContextProperty("rggModel", mdl);
+
+
+
+
     qmlView->engine()->rootContext()->setContextProperty("rggExePath", QDir::currentPath());
 }
 

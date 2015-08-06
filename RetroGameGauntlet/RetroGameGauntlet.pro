@@ -1,13 +1,11 @@
 TEMPLATE = app
 
-QT += multimedia qml quick widgets gui declarative xml svg
-QTPLUGIN += qsvg@
-#configure -static
+QT += multimedia qml quick widgets
 SOURCES += main.cpp \
     Controller.cpp \
 #    Game.cpp \
     Model.cpp \
-    RetroGameGauntlet.cpp \
+    RetroGameGauntlet.cpp
 #    Season.cpp \
 #    Stopwatch.cpp \
 #   QTableModel.cpp
@@ -25,7 +23,7 @@ include(deployment.pri)
 HEADERS += \
     Controller.h \
     Model.h \
-    RetroGameGauntlet.h \
+    RetroGameGauntlet.h
 #    Season.h \
 #    Stopwatch.h \
 #    QTableModel.h \

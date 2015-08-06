@@ -15,10 +15,13 @@ class Model: public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QStringList rggPlatforms READ platforms WRITE setPlatforms NOTIFY platformsSet)
+    Q_PROPERTY(QString rggPlatform READ platform WRITE setPlatform NOTIFY platformChanged)
     Q_PROPERTY(QString rggGame READ game WRITE setGame NOTIFY gameSet)
+
 
 private:
     QStringList platformsList;
+    QString currentPlatform;
     QString currentGame;
     static QMap<QString, QString> platformAssignment;
 
@@ -29,6 +32,8 @@ public:
     QStringList platforms();
 
     QString game();
+
+    QString platform();
 
 public slots:
 
@@ -48,6 +53,8 @@ public slots:
 
     Q_INVOKABLE void copyToClipboard(QString _text);
 
+    Q_INVOKABLE void setPlatform(QString _platform);
+
 signals:
 
     /**
@@ -60,9 +67,11 @@ signals:
     /**
      * @param QString _platform
      */
-    void gameRolled(QString& _game);
+    void gameRolled(QString _game);
 
-    void gameSet(QString& _game);
+    void gameSet(QString _game);
+
+    void platformChanged(QString);
 };
 
 #endif //_MODEL_H
