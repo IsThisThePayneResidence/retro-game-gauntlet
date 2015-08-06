@@ -1,18 +1,24 @@
-# Retro Game Gauntlet
-This is a simple application for rolling games for the 'Retro Game Gauntlet' challenge. 
+# [Retro Game Gauntlet](https://www.dropbox.com/sh/7jzupsdl5pcluxe/AABn4_tLtvVaFvyW6Uda3FPNa?dl=0 "Download fully built RGG application")
+This is a simple application for rolling games for the 'Retro Game Gauntlet' challenge written in C++ using Qt (QML, JavaScript).
 It's just a game roller now, but I'm going to add logging/history features (actually the features are almost done they're just commented, lol. Sorry)
 
-## Retro Game Gauntlet v0.1 (Dev)
+## Retro Game Gauntlet v0.1 (Dev) 
+
+[UML Diagramm](https://www.dropbox.com/s/1ww7pxr8oh1qcll/outRGG.pdf?dl=0 "Download v0.1 Dev UML diagramm")
 
 0.1 Dev version capabilities:
 * Select a random game from lists stored on a hard drive
 
 Future capabilities:
-* 0.1 Dev version capabilities
 * Track season number 
 * Track season games
 * Track game status and time spent on it
 * Play standart and custom sounds in menu and while rolling
 * Select a game from standart and custom files (from a local drive and the Internet)
 * Save user settings (sounds, games files path, etc.)
+<<<<<<< HEAD
 -
+=======
+
+![Screenshot](http://i.imgur.com/iPR8CNO.jpg "v0.1 Dev")
+>>>>>>> fcd8eedb69d794fc5ad27f4f972938b6d24426a9
