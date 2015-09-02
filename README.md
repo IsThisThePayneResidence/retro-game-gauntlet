@@ -20,5 +20,6 @@ Future capabilities:
 -
 =======
 
-![Screenshot](http://i.imgur.com/iPR8CNO.jpg "v0.1 Dev")
->>>>>>> fcd8eedb69d794fc5ad27f4f972938b6d24426a9
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="http://img.youtube.com/vi/AoL3uzleThI/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
