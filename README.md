@@ -17,7 +17,7 @@ Future capabilities:
 * Select a game from standart and custom files (from a local drive and the Internet)
 * Save user settings (sounds, games files path, etc.)
 
-## Example of usage by popular streamer
+## An example of usage by a popular streamer
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=AoL3uzleThI
 " target="_blank"><img src="http://img.youtube.com/vi/AoL3uzleThI/0.jpg" 
 alt="An example of usage" width="360" height="240" border="10" /></a>
