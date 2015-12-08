@@ -1,6 +1,6 @@
 # [Retro Game Gauntlet](https://www.dropbox.com/sh/7jzupsdl5pcluxe/AABn4_tLtvVaFvyW6Uda3FPNa?dl=0 "Download fully built RGG application")
 This is a simple application for rolling games for the 'Retro Game Gauntlet' challenge written in C++ using Qt (QML, JavaScript).
-It's just a game roller now, but I'm going to add logging/history features (actually the features are almost done they're just commented, lol. Sorry)
+It's just a game roller now, but it's going to have history features.
 
 ## Retro Game Gauntlet v0.1 (Dev) 
 
